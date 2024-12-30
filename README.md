@@ -1,4 +1,3 @@
-# Animations-Web-dev-
-Small animation projects.
+# Bubbles
 
-treasure: A treasure box with aimation added on hover. (Glowing)
+in progress
