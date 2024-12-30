@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+.bubble{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border:solid rgba(179, 60, 248, 0.703);
+    box-shadow: inset 0 0 30px rgba(243, 99, 253, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+.bubble2{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border:solid rgba(248, 60, 60, 0.703);
+    box-shadow: inset 0 0 30px rgba(253, 99, 99, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+.shine{
+    width: 20px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px / 5px;
+    top: 15%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(160deg);
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
