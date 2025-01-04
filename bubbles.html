@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="bubbles.css">
-        <title>test</title>
-    </head>
-    <body>
-        <div id="main" class="main"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bubbles.css">
+    <title>Bubbles</title>
+</head>
+<body>
+    
+    <div id="main" class="main"></div>
 
-    <div id="bubble" class="bubble" onclick="pop(bubble)">
-        <div id="shine1" class="shine"></div>
+    <div id="bubble" class="bubble" onclick="pop(document.getElementById('bubble'), document.getElementById('popcircle1'), document.getElementById('splatter1'), document.getElementById('splatter3'))">
+        <div id="shine" class="shine"></div>
+        <div id="popcircle1" class="popcircle"></div>
+        <div id="splatter1" class="splatter"></div>
+        <div id="splatter3" class="splatter3"></div>
     </div>
     
-    <div id="bubble2" class="bubble2" onclick="pop(bubble2)">
+    <div id="bubble2" class="bubble2" onclick="pop(document.getElementById('bubble2'), document.getElementById('popcircle2'), document.getElementById('splatter2'))">
         <div id="shine2" class="shine"></div>
+        <div id="popcircle2" class="popcircle"></div>
+        <div id="splatter2" class="splatter"></div>
     </div>
 
+    <div id="button" class="button"></div>
+    
+
     <script src="bubbles.js"></script>
-    </body>
+</body>
 </html>
