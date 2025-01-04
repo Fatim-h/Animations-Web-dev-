@@ -1,3 +1,3 @@
 # Bubbles
 
-in progress
+in progress: splatter animation.
