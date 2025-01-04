@@ -41,10 +41,47 @@ body {
 .shine {
     width: 20px;
     height: 10px;
-    background-color: white;
+    background-color: rgb(195, 195, 195);
     border-radius: 10px / 5px;
     position: absolute;
     top: 15%;
     left: 30%;
     transform: translate(-50%, -50%) rotate(160deg);
+}
+
+.popcircle {
+    width: 20px;
+    height: 20px;
+    margin-left: 40%;
+    border-radius: 50%;
+    position: absolute;
+    border: solid rgba(97, 51, 100, 0.5);
+    background-color: black;
+    transition: transform 0.05s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes popping {
+    0% {
+        opacity: 1;
+        width: 20px;
+        height: 20px;
+        margin-left: 40%;
+    }
+    50% {
+        width: 75px;
+        height: 75px;
+        opacity: 1;
+        margin-left: 20%;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        opacity: 1;
+        margin-left: 0%;
+    }
+}
+
+.popcircle.animate {
+    animation: popping 0.3s ease-out forwards;
 }
