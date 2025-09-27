@@ -1,7 +1,7 @@
-
 const body = document.body;
 let vw = window.innerWidth;
 let vh = window.innerHeight;
+let attract = -1;
 
 const minDistance = 5;
 const positions = [];
@@ -103,9 +103,21 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.transform = `translate(${cursorX - 3.5}px, ${cursorY - 3.5}px)`;
 });
 
+// === SET ATTRACT ===
+function set_attract() {
+  const button = document.getElementById('neon-button');
+  attract *= -1;
+
+  if (attract > 0) {
+    button.innerHTML = "REPEL";
+  } else {
+    button.innerHTML = "ATTRACT";
+  }
+}
+
 // === MOVE CIRCLES ===
 function moveCirclesToCursor() {
-  const RADIUS = 80;
+  const RADIUS = 100;
   const MAX_OFFSET = 50;
   const RETURN_SPEED = 0.4;
 
@@ -117,10 +129,10 @@ function moveCirclesToCursor() {
     if (dist < RADIUS) {
       const angle = Math.atan2(dy, dx);
       const offset = (RADIUS - dist) / RADIUS * MAX_OFFSET;
-      pos.offsetX = -Math.cos(angle) * offset;
-      pos.offsetY = -Math.sin(angle) * offset;
+      pos.offsetX = attract * Math.cos(angle) * offset;
+      pos.offsetY = attract * Math.sin(angle) * offset;
     } else {
-      // Gradual return
+      // Gradual return to original position
       pos.offsetX *= (1 - RETURN_SPEED);
       pos.offsetY *= (1 - RETURN_SPEED);
     }

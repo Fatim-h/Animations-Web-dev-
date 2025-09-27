@@ -50,3 +50,34 @@ body {
       0 0 40px #0ff;
   }
 }
+.neon-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #0ff;
+  background: white;
+  border: 2px solid #0ff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  box-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.neon-button:hover {
+  background: #0ff;
+  color: white;
+  box-shadow:
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+}
